@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satyanarayana Poultry Farm</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #fafafa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+            background: #8b0000;
+            color: white;
+            padding: 15px 60px;
+            display: flex;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+            /* ✅ bigger menu text */
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- PROCESS SECTION ---------- */
+        .process {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .process-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .process-box h3 {
+            color: #8b0000;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)),
+                url("./images/farm.png");
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 0 60px;
+            color: white;
+            height: 65vh;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .hero button {
+            background: #ffb703;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        .hero button:hover {
+            background: #ffa200;
+        }
+
+        /* ---------- SECTION ---------- */
+        section {
+            padding: 60px;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 30px;
+            color: #8b0000;
+        }
+
+        /* ---------- ABOUT ---------- */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        /* ---------- SERVICES ---------- */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-box h3 {
+            margin-bottom: 10px;
+            color: #8b0000;
+        }
+
+        /* ---------- WHY US ---------- */
+        .why-us {
+            background: #fff3e0;
+            border-radius: 10px;
+            align-items: center;
+            
+        }
+
+        .why-us ul {
+            width: 40%;
+            margin: auto;
+            list-style: none;
+        }
+
+        .why-us li {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #8b0000;
+        }
+
+        /* ---------- GALLERY ---------- */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery div {
+            height: 160px;
+            background: #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            color: #555;
+        }
+
+        /* ---------- CONTACT ---------- */
+        .contact {
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Satyanarayana Poultry Farm</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#why">Why Us</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Quality Chicken, Trusted by Hundred's Of People</h2>
+            <p>
+                Providing healthy poultry products with traditional values and modern
+                farming practices.
+            </p>
+            <button onclick="window.location.href='#contact'">Contact Us</button>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about">
+            <p>
+                Satyanarayana Poultry Farm is a trusted name in the poultry industry,
+                committed to delivering high-quality poultry products. With years of
+                experience and a strong focus on hygiene, nutrition, and ethical farming,
+                we ensure the best standards for our customers.
+            </p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <h3>Broiler Chicken Supply</h3>
+                <p>Healthy and well-maintained broiler chickens.</p>
+            </div>
+            <div class="service-box">
+                <h3>Online Delivery</h3>
+                <p>We supply poultry products with online delivery.</p>
+            </div>
+            <div class="service-box">
+                <h3>Wholesale Supply</h3>
+                <p>Bulk poultry supply for markets and businesses.</p>
+            </div>
+            <div class="service-box">
+                <h3>Farm Consultation</h3>
+                <p>Visit our farm for experiencing our practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why">
+        <h2>Why Choose Us</h2>
+        <div class="why-us">
+            <ul>
+                <li>✔ Hygienic and healthy poultry farming</li>
+                <li>✔ Affordable and transparent pricing</li>
+                <li>✔ Experienced farm management</li>
+                <li>✔ Trusted by local farmers and vendors</li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!-- OUR PROCESS -->
+    <section id="process">
+        <h2>Our Farm Process</h2>
+
+        <div class="process">
+            <div class="process-box">
+                <h3>🐣 Healthy Chicks</h3>
+                <p>
+                    We start with high-quality chicks sourced from trusted hatcheries.
+                </p>
+            </div>
+
+            <div class="process-box">
+                <h3>🌾 Nutritious Feed</h3>
+                <p>
+                    Balanced and hygienic feed is provided for healthy growth.
+                </p>
+            </div>
+
+            <div class="process-box">
+                <h3>🧼 Clean Environment</h3>
+                <p>
+                    Our farm follows strict cleanliness and bio-security measures.
+                </p>
+            </div>
+
+            <div class="process-box">
+                <h3>🚚 Timely Supply</h3>
+                <p>
+                    We ensure fresh and timely delivery to our customers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact">
+            <p><strong>📍 Address:</strong> D.Tallavalasa, Jonnada, Denkada Mandal, Vizianagaram District</p>
+            <p><strong>📞 Phone:</strong> +91 9989980401</p>
+            <p><strong>📧 Email:</strong> SatyanarayanaPoultry@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- GOOGLE MAPS -->
+
+
+    <!-- GOOGLE MAPS -->
+    <section id="map">
+        <h2>Our Location</h2>
+        <div style="max-width:1000px; margin:auto; border-radius:10px; overflow:hidden;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.5157489870313!2d83.4285625!3d18.0274375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3bfd44ad911d5d%3A0xe0c373e5ebdec516!2sSatyanarayana+Poultry+Farm!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Satyanarayana Poultry Farm | All Rights Reserved
+    </footer>
+
+</body>
+
+</html>
